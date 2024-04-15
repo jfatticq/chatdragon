@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>954aee3a-b874-4021-a00a-d52fea45c772</UserSecretsId>
+  </PropertyGroup>
+	
+	<ItemGroup>
+		<EmbeddedResource Include="Prompts/**/*.yaml" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <None Remove="Prompts\WorldGenerateTown.yaml" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.4" />
+    <PackageReference Include="Microsoft.SemanticKernel" Version="1.7.1" />
+    <PackageReference Include="Microsoft.SemanticKernel.Planners.Handlebars" Version="1.7.1-preview" />
+    <PackageReference Include="Microsoft.SemanticKernel.Planners.OpenAI" Version="1.7.1-preview" />
+    <PackageReference Include="Microsoft.SemanticKernel.Yaml" Version="1.7.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ChatDragon.Shared\ChatDragon.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,29 @@
+@ChatDragon.Api_HostAddress = https://localhost:7028
+
+
+POST {{ChatDragon.Api_HostAddress}}/api/getintent
+Content-Type: application/json
+
+{
+    "ask": "town of Brightsteel at base of the mountains"
+}
+
+###
+
+POST {{ChatDragon.Api_HostAddress}}/api/getintent
+Content-Type: application/json
+
+{
+    "ask": "handsome, but oafish prince of Taluth City wandering through marketplace"
+}
+
+###
+
+POST {{ChatDragon.Api_HostAddress}}/api/npc/generatequick
+Content-Type: application/json
+
+{
+    "ask": "middle-aged human hunter that lives on the outskirts of Brightsteel"
+}
+
+###

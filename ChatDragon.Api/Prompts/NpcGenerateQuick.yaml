@@ -1,0 +1,18 @@
+﻿name: NpcGenerateQuick
+description: Generate a quick NPC using provided notes
+template_format: semantic-kernel
+template: |
+  Generate a minimal NPC for a Dungeons and Dragons 5th edition game using these notes: {{$input}}    
+  Return a JSON with the following fields: 
+  First, a name field for the NPC's name', 
+    next an appearance field describing what the NPC looks like and is wearing in less than 50 words, 
+    and last a personality field with a brief summary of their personality in less than 50 words.
+  Ensure the JSON is valid and contains all three fields.
+input_variables: 
+  - name: input
+    description: Notes used to generate the NPC
+    is_required: true
+execution_settings: 
+  default: 
+    temperature: 0.5
+    max_tokens: 250

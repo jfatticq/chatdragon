@@ -1,0 +1,22 @@
+﻿name: WorldGenerateTown
+description: Generate a town using provided notes
+template_format: semantic-kernel
+template: |
+  Generate a town for a Dungeons and Dragons 5th edition game using these notes: {{$input}}    
+  Return a JSON with the following fields: 
+  First, a name field for the town's 'name', 
+    a population field with an integer value for the size of the town, 
+    a government field with a brief description of the town's government in less than 50 words, 
+    a defense field with a brief description of the town's defenses in less than 50 words, 
+    a commerce field with a brief description of the town's economy in less than 50 words, 
+    an organization field with a brief description of the town's organizations in less than 50 words, and 
+    last, an appearance field describing what the town looks like in less than 50 words.
+  Ensure the JSON is valid and contains all seven fields.
+input_variables: 
+  - name: input
+    description: Notes used to generate the town
+    is_required: true
+execution_settings: 
+  default: 
+    temperature: 0.5
+    max_tokens: 500
